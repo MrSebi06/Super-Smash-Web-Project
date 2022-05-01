@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Vector Battle';
+    src: url("../Fonts/Vector Battle/VectorBattle.woff2") format("woff2"),
+    url("../Fonts/Vector Battle/VectorBattle.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1, h2{
+    font-family: 'Vector Battle';
+    font-weight: 900;
+    text-align: center;
+}
