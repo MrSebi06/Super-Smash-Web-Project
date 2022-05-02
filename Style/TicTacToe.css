@@ -79,29 +79,62 @@ body::before{
 
         /**     Titres  **/
 
-h1, h2, h3, p{
+h1, h2, h3, p, a{
     text-align: center;
-    -webkit-animation: glow 1.5s ease-in-out infinite alternate;
-    -moz-animation: glow 1.5s ease-in-out infinite alternate;
-    animation: glow 1.5s ease-in-out infinite alternate;
+    -webkit-animation: glow 2s ease-in infinite alternate;
+    -moz-animation: glow 2s ease-in infinite alternate;
+    animation: glow 2s ease-in infinite alternate;
 }
 
 h1{
     font-family: 'Vector Battle', monospace;
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 h2{
     font-family: 'Vector Battle', monospace;
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 h3{
     font-family: 'Atari Classic Smooth';
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 p{
     font-family: 'Atari Classic Smooth';
-    font-size: 1em;
+    font-size: 1rem;
+}
+
+a{
+    font-family: 'Atari Classic Smooth';
+    font-size: 2rem;
+    color: white;
+}
+
+.download{
+    background-color: black;
+    color: white;
+}
+
+.download:hover{
+    background-color: white;
+    color: black;
+}
+
+.titleMain{
+    margin-top: 11rem;
+}
+
+.titleSub{
+    margin-top: 2rem;
+}
+
+.desc{
+    margin-top: 4.5rem;
+}
+
+.desc p{
+    margin-top: 1.2rem;
 }
