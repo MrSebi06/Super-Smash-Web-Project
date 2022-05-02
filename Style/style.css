@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  text-align: center;
+}
+header {
+  background-color: rgb(202, 202, 202);
+  height: 6rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(202, 202, 202);
+  height: 6rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+  margin: 0;
+  margin-right: 8%;
+}
+
+li {
+  margin: 0 6rem;
+}
+a {
+  padding: 0.5rem 1.5rem;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  padding: 0;
+}
+
+.lamp {
+  width: 4rem;
+  height: 4rem;
+  background-color: red;
+  margin-left: 4rem;
+}
+
+.index-background {
+  height: 54rem;
+  background-image: url("/img/img-index-background-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.container-fluid {
+  height: 900px;
+}
+
+#index-news {
+  background-color: red;
+}
+
+#index-aboutUs {
+  background-color: blue;
+}
+#index-games {
+  background-color: green;
+}
+#index-help {
+  background-color: pink;
+}
+
+#carouselGames{
+  padding: 2rem 19rem;
+}
