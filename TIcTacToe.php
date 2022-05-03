@@ -2,10 +2,12 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tic Tac Toe</title>
         <link type="text/css" rel="stylesheet" href="Style/TicTacToe.css">
     </head>
-    <body>
+    <body id="canvas">
+        
         <h1 class="titleMain">Tic Tac Toe</h1>
         <h2 class="titleSub">Press download to play</h2>
         <section class="desc">
@@ -14,5 +16,6 @@
             Adjust the terrain at your will, change the colors as you like, your imagination <br>is the only frontier ! <br><br><br><br><br><br><br><br>
             <a class="download" href="">DOWNLOAD</a> </p>
         </section>
+        <script src="Script/TicTacToe.js"></script>
     </body>
 </html>
