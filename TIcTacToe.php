@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tic Tac Toe</title>
-        <link type="text/css" rel="stylesheet" href="Style/TicTacToe.css">
+        <link type="text/css" rel="stylesheet" href="style/TicTacToe.css">
     </head>
     <body id="canvas">
         
@@ -16,6 +16,6 @@
             Adjust the terrain at your will, change the colors as you like, your imagination <br>is the only frontier ! <br><br><br><br><br><br><br><br>
             <a class="download" href="">DOWNLOAD</a> </p>
         </section>
-        <script src="Script/TicTacToe.js"></script>
+        <script src="script/TicTacToe.js"></script>
     </body>
 </html>
