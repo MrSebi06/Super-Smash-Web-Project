@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tic Tac Toe</title>
-        <link type="text/css" rel="stylesheet" href="style/TicTacToe.css">
+        <link type="text/css" rel="stylesheet" href="Style/TicTacToe.css">
     </head>
     <body id="canvas">
         
