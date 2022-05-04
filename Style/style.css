@@ -1,92 +1,106 @@
-* {
+@font-face {
+  font-family: 'Atari';
+  src: url(/fonts/AtariClassic-Regular.woff);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Atari-Chunky';
+  src: url(/fonts/AtariClassicChunky.woff2);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Atari-ExtraSmooth';
+  src: url(/fonts/AtariClassicExtrasmooth.woff2);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Atari-Smooth';
+  src: url(/fonts/AtariClassicSmooth.woff2);
+  font-style: normal;
+  font-weight: normal;
+}
+
+*{
   box-sizing: border-box;
 }
-body {
+
+body{
   position: relative;
-  text-align: center;
-}
-header {
-  background-color: rgb(202, 202, 202);
-  height: 6rem;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+header{
+  position: fixed;
   width: 100%;
-  background-color: rgb(202, 202, 202);
-  height: 6rem;
+  padding: 1.3rem 2.5rem;
+  background-color: rgba(25, 33, 94, 0.2);
+  font-family: 'Atari';
 }
 
-nav {
+ul{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-}
-ul {
-  display: flex;
+  font-size: 1rem;
   list-style: none;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.7rem;
-  margin: 0;
-  margin-right: 8%;
-}
-
-li {
-  margin: 0 6rem;
-}
-a {
-  padding: 0.5rem 1.5rem;
-}
-
-a:hover {
-  text-decoration: none;
-  color: white;
-}
-
-section {
   padding: 0;
+  margin: 0;
 }
 
-.lamp {
-  width: 4rem;
-  height: 4rem;
-  background-color: red;
-  margin-left: 4rem;
+li, a{
+  color: white;
+  transition: 0.2s ease-out 0.1s;
 }
 
-.index-background {
-  height: 54rem;
+a{
+  padding: 1rem 2rem;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+.navigate:hover{
+  color: #FA67AB;
+  font-size: 115%;
+  text-decoration: none;
+  padding: 1rem 1.55rem;
+}
+
+.home:hover{
+  padding: 1rem 1.7rem;
+}
+
+.fa-lightbulb, .fa-user-astronaut{
+  font-size: 2rem;
+}
+
+
+.li-0{
+  position: relative;
+  margin-right: 10rem;
+}
+.li-4{
+  position: relative;
+  left: 12rem;
+}
+
+.background {
   background-image: url("/img/img-index-background-1.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 60rem;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
 }
 
-.container-fluid {
-  height: 900px;
-}
-
-#index-news {
-  background-color: red;
-}
-
-#index-aboutUs {
-  background-color: blue;
-}
-#index-games {
-  background-color: green;
-}
-#index-help {
-  background-color: pink;
-}
-
-#carouselGames{
-  padding: 2rem 19rem;
+.page-principale{
+  background-color: #19215E;
+  height: 1000px;
 }
