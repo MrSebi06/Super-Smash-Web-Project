@@ -31,7 +31,7 @@ body {
   position: relative;
 }
 
-main{
+main {
   transition: 0.2s ease-out 0.1s;
 }
 
@@ -69,6 +69,9 @@ a:hover {
   cursor: pointer;
 }
 
+.navigate {
+  margin: 0 5rem;
+}
 .navigate:hover {
   color: #fa67ab;
   font-size: 115%;
@@ -87,11 +90,11 @@ a:hover {
 
 .li-0 {
   position: relative;
-  margin-right: 10rem;
+  margin-right: 12rem;
 }
 .li-4 {
   position: relative;
-  left: 12rem;
+  left: 5rem;
 }
 
 .background {
@@ -111,7 +114,8 @@ a:hover {
   height: 1000px;
 }
 
-.login-el {
+.login-el,
+.createAccount-el {
   text-align: center;
   background-color: white;
   color: #19215e;
@@ -125,6 +129,18 @@ a:hover {
   height: 40rem;
   z-index: 1;
   padding: 5rem 2rem;
+
+  grid-row-gap: 2rem;
+  justify-content: center;
+}
+
+
+.createAccount-el .fa-angle-left {
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  left: 0.5rem;
+  padding: 1.5rem;
 }
 
 .login-form {
@@ -137,11 +153,34 @@ a:hover {
     "submit";
 }
 
-.input-el{
+.createAccount-form {
+  display: grid;
+  width: 30rem;
+  grid-gap: 1.8rem;
+  padding: 1rem 0;
+  grid-template-areas:
+    "pseudo pseudo"
+    "password repassword"
+    "email email"
+    "submit submit";
+}
+
+.input-el {
   padding: 1rem 3rem;
   border-radius: 0.3rem;
   border: 2px solid #19215e;
   text-align: start;
+}
+
+.input-create-el {
+  padding: 1rem 1rem;
+  border-radius: 0.3rem;
+  border: 2px solid #19215e;
+  text-align: start;
+}
+
+.pseudo-el {
+  grid-area: pseudo;
 }
 
 .email-el {
@@ -150,8 +189,20 @@ a:hover {
 .password-el {
   grid-area: password;
 }
-.button-submit-el {
+
+.rePassword-el {
+  grid-area: repassword;
+}
+
+.button-reSubmit-el{
+  position: relative;
+  top: 3.5rem;
+}
+
+.button-submit-el,
+.button-reSubmit-el {
   grid-area: submit;
+  border-color: #19215e;
   border-radius: 100rem;
   width: 4rem;
   height: 4rem;
@@ -161,21 +212,30 @@ a:hover {
   margin-bottom: 0rem;
 }
 
-.button-submit-el:hover {
+.button-submit-el:hover,
+.button-reSubmit-el:hover {
   color: white;
   background-color: #19215e;
   place-self: center;
-  width : 4.2rem;
+  width: 4.2rem;
   height: 4.2rem;
   font-size: 120%;
   margin-bottom: -0.2rem;
 }
 
+.button-submit-el:active,
+.button-reSubmit-el:active{
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 0rem;
+  color: #3BAC29;
+}
 
 .forget-password-el,
 .create-account-el {
+  display: inline-block;
   cursor: pointer;
   text-decoration: underline;
   font-size: 0.8rem;
+  padding: 0rem 0.2rem;
 }
-
