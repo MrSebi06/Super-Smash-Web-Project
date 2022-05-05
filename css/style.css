@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Atari';
+  src: url(/fonts/AtariClassic-Regular.woff);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Atari-Chunky';
+  src: url(/fonts/AtariClassicChunky.woff2);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Atari-ExtraSmooth';
+  src: url(/fonts/AtariClassicExtrasmooth.woff2);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Atari-Smooth';
+  src: url(/fonts/AtariClassicSmooth.woff2);
+  font-style: normal;
+  font-weight: normal;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  padding: 1.3rem 2.5rem;
+  background-color: rgba(25, 33, 94, 0.2);
+  font-family: 'Atari';
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li, a{
+  color: white;
+  transition: 0.2s ease-out 0.1s;
+}
+
+a{
+  padding: 1rem 2rem;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+.navigate:hover{
+  color: #FA67AB;
+  font-size: 115%;
+  text-decoration: none;
+  padding: 1rem 1.55rem;
+}
+
+.home:hover{
+  padding: 1rem 1.7rem;
+}
+
+.fa-lightbulb, .fa-user-astronaut{
+  font-size: 2rem;
+}
+
+
+.li-0{
+  position: relative;
+  margin-right: 10rem;
+}
+.li-4{
+  position: relative;
+  left: 12rem;
+}
+
+.background {
+  background-image: url("/img/img-index-background-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 60rem;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.page-principale{
+  background-color: #19215E;
+  height: 1000px;
+}
