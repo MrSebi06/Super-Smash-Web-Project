@@ -10,12 +10,39 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="/Style/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <script
       src="https://kit.fontawesome.com/0fb78a8903.js"
       crossorigin="anonymous"
     ></script>
   </head>
+  <!-- Fenêtre de connexion  -->
+  <div class="login-el">
+    <h1>Connexion</h1>
+    <form class="login-form">
+      <input
+        class="input-el email-el"
+        name="email"
+        type="email"
+        placeholder="Identifiants"
+      />
+      <input
+        class="input-el password-el"
+        name="password"
+        type="password"
+        placeholder="Mot de passe"
+      />
+      <button class="button-submit-el" type="button">
+        <i class="fa-solid fa-check"></i>
+      </button>
+    </form>
+    <p class="forget-password-el">mot de passe oublié</p>
+    <p class="create-account-el">créer un nouveau compte</p>
+  </div>
+  <!-- Fenêtre de connexion  -->
+  <!-- Fenêtre de création de compte  -->
+  <div class=""
+
   <body>
     <header>
       <nav>
@@ -32,14 +59,19 @@
             <a><i class="fa-lg fa-solid fa-language"></i></a>
           </li>
           <li class="li-5">
-            <a><i class="fa-solid fa-user-astronaut"></i></a>
+            <a onclick="login()"
+              ><i class="fa-solid fa-user-astronaut"></i
+            ></a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main onclick="fermer()" class="blur-el">
       <div class="background"></div>
-      <section class="page-principale"></section>
+      <section class="page-principale">
+        
+      </section>
     </main>
+    <script src="/script/index.js"></script>
   </body>
 </html>
