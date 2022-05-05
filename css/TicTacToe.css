@@ -1,0 +1,148 @@
+/**     FONTS   **/
+
+/* Vector Battle */
+@font-face {
+  font-family: "Vector Battle";
+  src: url("../Fonts/Vector Battle/VectorBattle.woff2") format("woff2"),
+    url("../Fonts/Vector Battle/VectorBattle.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Atari Classic */
+@font-face {
+  font-family: "Atari Classic";
+  src: url("../Fonts/Atari Classic/AtariClassic-Regular.woff2") format("woff2"),
+    url("../Fonts/Atari Classic/AtariClassic-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atari Classic Extrasmooth";
+  src: url("../Fonts/Atari Classic/AtariClassicExtrasmooth.woff2")
+      format("woff2"),
+    url("../Fonts/Atari Classic/AtariClassicExtrasmooth.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atari Classic Smooth";
+  src: url("../Fonts/Atari Classic/AtariClassicSmooth.woff2") format("woff2"),
+    url("../Fonts/Atari Classic/AtariClassicSmooth.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atari Classic Chunky";
+  src: url("../Fonts/Atari Classic/AtariClassicChunky.woff2") format("woff2"),
+    url("../Fonts/Atari Classic/AtariClassicChunky.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/** Effet de brillance du texte **/
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5),
+      0 0 2px rgba(255, 255, 255, 0.5), 0 0 3px rgba(255, 255, 255, 0.5),
+      0 0 4px rgba(255, 255, 255, 0.5), 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 6px rgba(255, 255, 255, 0.5), 0 0 7px rgba(255, 255, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.4),
+      0 0 3px rgba(255, 255, 255, 0.4), 0 0 4px rgba(255, 255, 255, 0.4),
+      0 0 5px rgba(255, 255, 255, 0.4), 0 0 6px rgba(255, 255, 255, 0.4),
+      0 0 7px rgba(255, 255, 255, 0.4), 0 0 8px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/**     Style   **/
+html {
+  background-color: black;
+  color: white;
+}
+
+/*
+body::before{
+    position: absolute;
+    content: '';
+    background-image: url('../img/Lignes.svg');
+    width: 100%;
+    height: 100%;
+}
+*/
+
+/**     Titres  **/
+
+h1,
+h2,
+h3,
+p,
+a {
+  text-align: center;
+  -webkit-animation: glow 2s ease-in infinite alternate;
+  -moz-animation: glow 2s ease-in infinite alternate;
+  animation: glow 2s ease-in infinite alternate;
+}
+
+h1 {
+  font-family: "Vector Battle", monospace;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "Vector Battle", monospace;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+h3 {
+  font-family: "Atari Classic Smooth";
+  font-size: 1.2rem;
+}
+
+p {
+  font-family: "Atari Classic Smooth";
+  font-size: 1rem;
+}
+
+a {
+  font-family: "Atari Classic Smooth";
+  font-size: 2rem;
+  color: white;
+}
+
+.download {
+  background-color: black;
+  color: white;
+}
+
+.download:hover {
+  background-color: white;
+  color: black;
+}
+
+.titleMain {
+  margin-top: 11rem;
+}
+
+.titleSub {
+  margin-top: 2rem;
+}
+
+.desc {
+  margin-top: 4.5rem;
+}
+
+.desc p {
+  margin-top: 1.2rem;
+}
