@@ -1,45 +1,50 @@
 @font-face {
-  font-family: 'Atari';
+  font-family: "Atari";
   src: url(/fonts/AtariClassic-Regular.woff);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Atari-Chunky';
+  font-family: "Atari-Chunky";
   src: url(/fonts/AtariClassicChunky.woff2);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Atari-ExtraSmooth';
+  font-family: "Atari-ExtraSmooth";
   src: url(/fonts/AtariClassicExtrasmooth.woff2);
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Atari-Smooth';
+  font-family: "Atari-Smooth";
   src: url(/fonts/AtariClassicSmooth.woff2);
   font-style: normal;
   font-weight: normal;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   position: relative;
 }
 
-header{
+main{
+  transition: 0.2s ease-out 0.1s;
+}
+
+header {
   position: fixed;
   width: 100%;
   padding: 1.3rem 2.5rem;
   background-color: rgba(25, 33, 94, 0.2);
-  font-family: 'Atari';
+  font-family: "Atari";
+  z-index: 1;
 }
 
-ul{
+ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,40 +55,41 @@ ul{
   margin: 0;
 }
 
-li, a{
+li,
+a {
   color: white;
   transition: 0.2s ease-out 0.1s;
 }
 
-a{
+a {
   padding: 1rem 2rem;
 }
 
-a:hover{
+a:hover {
   cursor: pointer;
 }
 
-.navigate:hover{
-  color: #FA67AB;
+.navigate:hover {
+  color: #fa67ab;
   font-size: 115%;
   text-decoration: none;
   padding: 1rem 1.55rem;
 }
 
-.home:hover{
+.home:hover {
   padding: 1rem 1.7rem;
 }
 
-.fa-lightbulb, .fa-user-astronaut{
+.fa-lightbulb,
+.fa-user-astronaut {
   font-size: 2rem;
 }
 
-
-.li-0{
+.li-0 {
   position: relative;
   margin-right: 10rem;
 }
-.li-4{
+.li-4 {
   position: relative;
   left: 12rem;
 }
@@ -100,7 +106,76 @@ a:hover{
   margin: 0;
 }
 
-.page-principale{
-  background-color: #19215E;
+.page-principale {
+  background-color: #19215e;
   height: 1000px;
 }
+
+.login-el {
+  text-align: center;
+  background-color: white;
+  color: #19215e;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -20rem;
+  margin-top: -17rem;
+  width: 40rem;
+  height: 40rem;
+  z-index: 1;
+  padding: 5rem 2rem;
+}
+
+.login-form {
+  display: grid;
+  grid-gap: 3rem;
+  padding: 4rem 7rem;
+  grid-template-areas:
+    "email"
+    "password"
+    "submit";
+}
+
+.input-el{
+  padding: 1rem 3rem;
+  border-radius: 0.3rem;
+  border: 2px solid #19215e;
+  text-align: start;
+}
+
+.email-el {
+  grid-area: email;
+}
+.password-el {
+  grid-area: password;
+}
+.button-submit-el {
+  grid-area: submit;
+  border-radius: 100rem;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  place-self: center;
+  transition: 0.2s ease-out 0.1s;
+  margin-bottom: 0rem;
+}
+
+.button-submit-el:hover {
+  color: white;
+  background-color: #19215e;
+  place-self: center;
+  width : 4.2rem;
+  height: 4.2rem;
+  font-size: 120%;
+  margin-bottom: -0.2rem;
+}
+
+
+.forget-password-el,
+.create-account-el {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.8rem;
+}
+
