@@ -3,8 +3,8 @@
 /* Vector Battle */
 @font-face {
   font-family: "Vector Battle";
-  src: url("../Fonts/Vector Battle/VectorBattle.woff2") format("woff2"),
-    url("../Fonts/Vector Battle/VectorBattle.woff") format("woff");
+  src: url("../fonts/Vector Battle/VectorBattle.woff2") format("woff2"),
+    url("../fonts/Vector Battle/VectorBattle.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,8 +13,8 @@
 /* Atari Classic */
 @font-face {
   font-family: "Atari Classic";
-  src: url("../Fonts/Atari Classic/AtariClassic-Regular.woff2") format("woff2"),
-    url("../Fonts/Atari Classic/AtariClassic-Regular.woff") format("woff");
+  src: url("../fonts/Atari Classic/AtariClassic-Regular.woff2") format("woff2"),
+    url("../fonts/Atari Classic/AtariClassic-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -22,9 +22,9 @@
 
 @font-face {
   font-family: "Atari Classic Extrasmooth";
-  src: url("../Fonts/Atari Classic/AtariClassicExtrasmooth.woff2")
+  src: url("../fonts/Atari Classic/AtariClassicExtrasmooth.woff2")
       format("woff2"),
-    url("../Fonts/Atari Classic/AtariClassicExtrasmooth.woff") format("woff");
+    url("../fonts/Atari Classic/AtariClassicExtrasmooth.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -32,8 +32,8 @@
 
 @font-face {
   font-family: "Atari Classic Smooth";
-  src: url("../Fonts/Atari Classic/AtariClassicSmooth.woff2") format("woff2"),
-    url("../Fonts/Atari Classic/AtariClassicSmooth.woff") format("woff");
+  src: url("../fonts/Atari Classic/AtariClassicSmooth.woff2") format("woff2"),
+    url("../fonts/Atari Classic/AtariClassicSmooth.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -41,8 +41,8 @@
 
 @font-face {
   font-family: "Atari Classic Chunky";
-  src: url("../Fonts/Atari Classic/AtariClassicChunky.woff2") format("woff2"),
-    url("../Fonts/Atari Classic/AtariClassicChunky.woff") format("woff");
+  src: url("../fonts/Atari Classic/AtariClassicChunky.woff2") format("woff2"),
+    url("../fonts/Atari Classic/AtariClassicChunky.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
