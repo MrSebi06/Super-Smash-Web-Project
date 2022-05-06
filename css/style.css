@@ -115,7 +115,8 @@ a:hover {
 }
 
 .login-el,
-.createAccount-el {
+.createAccount-el,
+.passwordAccount-el {
   text-align: center;
   background-color: white;
   color: #19215e;
@@ -134,8 +135,7 @@ a:hover {
   transition: all 0.2s ease-out;
 }
 
-
-.createAccount-el .fa-angle-left {
+.fa-angle-left {
   position: absolute;
   cursor: pointer;
   top: 1rem;
@@ -163,6 +163,18 @@ a:hover {
     "password repassword"
     "email email"
     "submit submit";
+}
+
+.passwordAccount-form {
+  display: grid;
+  grid-row-gap: 2rem;
+  width: 25rem;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas:
+    "title"
+    "email"
+    "submit";
 }
 
 .input-el {
@@ -194,13 +206,27 @@ a:hover {
   grid-area: repassword;
 }
 
-.button-reSubmit-el{
+.button-reSubmit-el {
   position: relative;
   top: 3.5rem;
 }
 
+.passwordAccountContact-el {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.passwordAccountTitle-el {
+  grid-area: title;
+  margin: 1.5rem 0 4.5rem;
+}
+
+.button-passwordSubmit-el {
+  margin-top: 6rem;
+}
+
 .button-submit-el,
-.button-reSubmit-el {
+.button-reSubmit-el,
+.button-passwordSubmit-el {
   grid-area: submit;
   border-color: #19215e;
   border-radius: 100rem;
@@ -213,7 +239,8 @@ a:hover {
 }
 
 .button-submit-el:hover,
-.button-reSubmit-el:hover {
+.button-reSubmit-el:hover,
+.button-passwordSubmit-el:hover {
   color: white;
   background-color: #19215e;
   place-self: center;
@@ -224,11 +251,12 @@ a:hover {
 }
 
 .button-submit-el:active,
-.button-reSubmit-el:active{
+.button-reSubmit-el:active,
+.button-passwordSubmit-el {
   width: 4rem;
   height: 4rem;
   margin-bottom: 0rem;
-  color: #3BAC29;
+  color: #3bac29;
 }
 
 .forget-password-el,
@@ -240,7 +268,6 @@ a:hover {
   padding: 0rem 0.2rem;
 }
 
-
 .background-index {
   position: relative;
   width: 100%;
@@ -251,27 +278,31 @@ a:hover {
   align-items: center;
 }
 
-.background-index > img{
-    position: absolute;
-    bottom: 0;
+.background-index > img {
+  position: absolute;
+  bottom: 0;
 }
 
-.image1{
-    z-index: 6;
+.image1 {
+  z-index: 6;
 }
-.image2{
-    z-index: 5;
+.image2 {
+  z-index: 5;
+  bottom: -4rem;
 }
-.image3{
-    z-index: 1;
+.image3 {
+  z-index: 1;
+  top: 3rem;
 }
-.image4{
-    z-index: 3;
+.image4 {
+  z-index: 3;
+  bottom: -8rem;
 }
-.image5{
-    z-index: 2;
-    left: 0;
+.image5 {
+  z-index: 2;
+  left: 0;
+  bottom: 5rem;
 }
-.image6{
-    z-index: 0;
+.image6 {
+  z-index: 0;
 }

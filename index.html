@@ -17,72 +17,92 @@
     ></script>
   </head>
 
-  <!-- Fenêtre de connexion  -->
-  <div class="login-el">
-    <h1>Connexion</h1>
-    <form class="login-form">
-      <input
-        class="input-el email-el"
-        name="email"
-        type="email"
-        placeholder="Identifiants"
-      />
-      <input
-        class="input-el password-el"
-        name="password"
-        type="password"
-        placeholder="Mot de passe"
-      />
-      <button class="button-submit-el" type="submit">
-        <i class="fa-solid fa-check"></i>
-      </button>
-    </form>
-    <p class="forget-password-el">mot de passe oublié</p>
-    <br />
-    <p onclick="createAccount()" class="create-account-el">
-      créer un nouveau compte
-    </p>
-  </div>
-  <!-- Fenêtre de connexion  -->
-
-  <!-- Fenêtre de création de compte  -->
-  <div class="createAccount-el">
-    <i onclick="login()" class="fa-2xl fa-solid fa-angle-left"></i>
-    <h1>Inscription</h1>
-    <form class="createAccount-form">
-      <input
-        class="input-create-el pseudo-el"
-        name="pseudo"
-        type="text"
-        placeholder="Pseudo"
-      />
-      <input
-        class="input-create-el email-el"
-        name="email"
-        type="email"
-        placeholder="Email"
-      />
-
-      <input
-        class="input-create-el password-el"
-        name="password"
-        type="password"
-        placeholder="Mot de passe"
-      />
-      <input
-        class="input-create-el rePassword-el"
-        name="rePassword"
-        type="password"
-        placeholder="Encore une fois !"
-      />
-      <button class="button-reSubmit-el" type="submit">
-        <i class="fa-solid fa-check"></i>
-      </button>
-    </form>
-  </div>
-  <!-- Fenêtre de création de compte  -->
-
   <body>
+    <!-- Fenêtre de connexion  -->
+    <div class="login-el">
+      <h1>Connexion</h1>
+      <form class="login-form">
+        <input
+          class="input-el email-el"
+          name="email"
+          type="email"
+          placeholder="Identifiants"
+        />
+        <input
+          class="input-el password-el"
+          name="password"
+          type="password"
+          placeholder="Mot de passe"
+        />
+        <button class="button-submit-el" type="submit">
+          <i class="fa-solid fa-check"></i>
+        </button>
+      </form>
+      <p onclick="passwordAccount()" class="forget-password-el">
+        mot de passe oublié
+      </p>
+      <br />
+      <p onclick="createAccount()" class="create-account-el">
+        créer un nouveau compte
+      </p>
+    </div>
+    <!-- Fenêtre de connexion  -->
+
+    <!-- Fenêtre de création de compte  -->
+    <div class="createAccount-el">
+      <i onclick="login()" class="fa-2xl fa-solid fa-angle-left"></i>
+      <h1>Inscription</h1>
+      <form class="createAccount-form">
+        <input
+          class="input-create-el pseudo-el"
+          name="pseudo"
+          type="text"
+          placeholder="Pseudo"
+        />
+        <input
+          class="input-create-el email-el"
+          name="email"
+          type="email"
+          placeholder="Email"
+        />
+
+        <input
+          class="input-create-el password-el"
+          name="password"
+          type="password"
+          placeholder="Mot de passe"
+        />
+        <input
+          class="input-create-el rePassword-el"
+          name="rePassword"
+          type="password"
+          placeholder="Encore une fois !"
+        />
+        <button class="button-reSubmit-el" type="submit">
+          <i class="fa-solid fa-check"></i>
+        </button>
+      </form>
+    </div>
+    <!-- Fenêtre de création de compte  -->
+
+    <!-- Fenêtre de récupération de mot de passe  -->
+    <div class="passwordAccount-el">
+      <i onclick="login()" class="fa-2xl fa-solid fa-angle-left"></i>
+      <form class="passwordAccount-form">
+        <h1 class="passwordAccountTitle-el">Récupération de mot de passe</h1>
+        <input
+          class="input-el email-el"
+          name="email"
+          type="email"
+          placeholder="Saisissez votre email de récupération."
+        />
+        <button class="button-passwordSubmit-el" type="submit">
+          <i class="fa-solid fa-check"></i>
+        </button>
+        <p class="passwordAccountContact-el">Contacter le support</p>
+      </form>
+    </div>
+    <!-- Fenêtre de récupération de mot de passe  -->
     <header>
       <nav>
         <ul>
@@ -103,7 +123,7 @@
         </ul>
       </nav>
     </header>
-    <main onclick="fermer()" class="blur-el">
+    <main onclick="fermer()" class="blura-el">
       <div class="background-index">
         <img class="image1" src="/img/retrospective-text.png" />
         <img class="image2" src="/img/reflect.png" />
