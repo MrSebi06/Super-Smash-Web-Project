@@ -1,0 +1,473 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* --------------------------------------------FONTS-------------------------------------------- */
+
+@font-face {
+  font-family: "Atari";
+  src: url("../fonts/AtariClassic-Regular.woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Atari-Chunky";
+  src: url("../fonts/AtariClassicChunky.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Atari-ExtraSmooth";
+  src: url("../fonts/AtariClassicExtrasmooth.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Atari-Smooth";
+  src: url("../fonts/AtariClassicSmooth.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans-Regular.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans-Bold.woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans-SemiBold.woff2");
+  font-style: normal;
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "JosefinSlab";
+  src: url("../fonts/JosefinSlab-Regular.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JosefinSlab";
+  src: url("../fonts/JosefinSlab-Bold.woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "JosefinSlab";
+  src: url("../fonts/JosefinSlab-SemiBold.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* --------------------------------------------FONTS-------------------------------------------- */
+
+/* --------------------------------------------ALERTS-------------------------------------------- */
+
+.success {
+  color: #3bac29;
+}
+
+.alert {
+  color: #bf0000;
+}
+
+/* --------------------------------------------ALERTS-------------------------------------------- */
+
+/*---------------------------------------------FORMULAIRES---------------------------------------*/
+
+.login-el,
+.createAccount-el,
+.passwordAccount-el {
+  text-align: center;
+  background-color: white;
+  color: #19215e;
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -20rem;
+  margin-top: -20rem;
+  width: 40rem;
+  height: 40rem;
+  z-index: 1;
+  padding: 5rem 2rem;
+  align-content: center;
+  justify-content: center;
+  transition: all 0.2s ease-out;
+  border-radius: 2rem;
+}
+
+.fa-angle-left {
+  position: absolute;
+  cursor: pointer;
+  top: 2rem;
+  left: 1rem;
+  padding: 1.5rem;
+}
+
+.login-form, .createAccount-form, .passwordAccount-form{
+  display: grid;
+  grid-gap: 2rem;
+  width: 25rem;
+}
+
+.login-form {
+  margin: 6rem auto 0;
+  grid-template-areas:
+    "email"
+    "password"
+    "submit";
+}
+
+.createAccount-form {
+  padding: 1rem 0;
+  margin : 4rem auto 0;
+  grid-template-areas:
+    "pseudo pseudo"
+    "password repassword"
+    "email email"
+    "submit submit";
+}
+
+.passwordAccount-form {
+  margin : 0 auto;
+  grid-template-areas:
+    "title"
+    "email"
+    "submit";
+}
+
+.input-el, .input-create-el {
+  padding: 1rem 1rem;
+  border-radius: 0.3rem;
+  border: 2px solid #19215e;
+  width: 100%;
+  text-align: start;
+}
+
+.message-el {
+  position: absolute;
+  border: none;
+  top : 10rem;
+  left: 15rem;
+}
+.nickname-el {
+  grid-area: pseudo;
+}
+
+.email-el {
+  grid-area: email;
+}
+.password-el {
+  grid-area: password;
+}
+
+.rePassword-el {
+  grid-area: repassword;
+}
+
+.button-reSubmit-el {
+  position: relative;
+  top: 2.2rem;
+}
+
+.passwordAccountContact-el {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.passwordAccountTitle-el {
+  grid-area: title;
+  margin-bottom: 4.5rem;
+}
+
+.button-submit-el{
+  margin: 1.5rem 0 3.5rem;
+}
+
+.button-passwordSubmit-el {
+  margin: 3rem 0 3.3rem;
+}
+
+.button-submit-el,
+.button-reSubmit-el,
+.button-passwordSubmit-el {
+  grid-area: submit;
+  border-color: #19215e;
+  border-radius: 3rem;
+  width: 4.2rem;
+  height: 4rem;
+  cursor: pointer;
+  place-self: center;
+  transition: 0.2s ease-out 0.1s;
+}
+
+.button-submit-el:hover,
+.button-reSubmit-el:hover,
+.button-passwordSubmit-el:hover {
+  color: white;
+  background-color: #3bac29;
+  border: none;
+  border-radius: 10px;
+  width: 10rem;
+}
+
+.contact-us-el,
+.forget-password-el,
+.create-account-el {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.8rem;
+  padding: 0rem 0.2rem;
+}
+
+/*---------------------------------------------FORMULAIRES---------------------------------------*/
+
+/*---------------------------------------------HEADER & FOOTER---------------------------------------*/
+
+body {
+  position: relative;
+  width: 1920px;
+  margin: 0 auto;
+  font-family: "JosefinSlab";
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(25, 33, 94, 0.25);
+  padding: 1.3rem 3rem;
+  z-index: 100000;
+}
+
+.logo {
+  width: 4.5rem;
+}
+
+.navbar {
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  color: #fa67ab;
+}
+
+.nav-link,
+.dropdown-item {
+  color: rgb(228, 228, 228);
+  font-family: "Atari";
+}
+
+.dropdown-item {
+  color: #080f46;
+}
+
+.fa-user-astronaut {
+  font-size: 3rem;
+}
+
+.fa-language {
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    width: 30%;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navigation {
+    justify-content: flex-end;
+  }
+  .navbar-nav {
+    align-items: center;
+  }
+  .connexion-nav-item {
+    margin-left: 5rem !important;
+  }
+
+  .language-nav-item {
+    margin-left: 17rem !important;
+  }
+
+  .nav-item {
+    margin-left: 8.5rem;
+  }
+
+  .dropdown-menu {
+    top: 4rem !important;
+  }
+
+  .dropdown-menu-profile {
+    top: 5rem !important;
+    text-align: end;
+    right: 0;
+  }
+}
+
+footer {
+  position: relative;
+  font-weight: normal;
+  bottom: 0;
+  width: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 5rem;
+  background-color: #080f46;
+  color: rgb(235, 235, 235);
+  font-size: 1.3rem;
+}
+
+footer p {
+  margin: 0;
+}
+.footer-icon a {
+  padding: 0.5rem;
+  margin: 0 1.6rem;
+}
+
+.footer-icon a i {
+  font-size: 2rem;
+}
+
+/*---------------------------------------------HEADER & FOOTER---------------------------------------*/
+
+.background-index {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-index > img {
+  position: absolute;
+}
+
+.image1 {
+  z-index: 6;
+  bottom: 0;
+}
+.image2 {
+  z-index: 5;
+  bottom: -4rem;
+}
+.image3 {
+  z-index: 1;
+  top: 3rem;
+}
+.image4 {
+  z-index: 3;
+  bottom: -8rem;
+}
+.image5 {
+  z-index: 2;
+  bottom: -8rem;
+}
+.image6 {
+  z-index: 0;
+  bottom: 0;
+}
+
+.information-div {
+  color: #e7e7e7;
+  padding-bottom: 16rem;
+}
+
+.information-row {
+  justify-content: space-between;
+
+  background-color: rgba(0, 0, 0, 0.13);
+  padding: 0 14rem;
+  align-items: center;
+}
+
+.information-write > h1,
+.carousel-div h1 {
+  font-family: "JosefinSans";
+  font-weight: bold;
+  color: rgb(226, 226, 226);
+  font-size: 3.2rem;
+}
+
+.information-write > p,
+.carousel-div p {
+  font-size: 2.2rem;
+  line-height: 1.5;
+}
+
+.presentation-div {
+  padding-top: 16rem;
+  background: linear-gradient(#00595f, #101d80);
+}
+
+.need-div {
+  background-color: #19215e;
+}
+
+.carousel-div p {
+  text-align: center;
+}
+
+.sonic {
+  width: 25rem;
+}
+
+.games-div {
+  background: linear-gradient(#101d80, #19215e);
+}
+
+.carousel-div {
+  position: relative;
+  color: #e7e7e7;
+  padding: 0 14rem;
+  padding-bottom: 16rem;
+}
+
+.carousel-div h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.slide-carousel {
+  margin-bottom: 2rem;
+}
+.carousel-inner {
+  border-radius: 3rem;
+  margin: 0 auto;
+}
+.carousel-window {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+  border-radius: 3rem;
+}
+
+.carousel-window img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.splashArt-div {
+  background-color: #19215e;
+}
