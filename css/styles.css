@@ -30,42 +30,7 @@
   font-style: normal;
   font-weight: normal;
 }
-@font-face {
-  font-family: "JosefinSans";
-  src: url("../fonts/JosefinSans-Regular.woff2");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "JosefinSans";
-  src: url("../fonts/JosefinSans-Bold.woff2");
-  font-style: normal;
-  font-weight: bold;
-}
-@font-face {
-  font-family: "JosefinSans";
-  src: url("../fonts/JosefinSans-SemiBold.woff2");
-  font-style: normal;
-  font-weight: bolder;
-}
-@font-face {
-  font-family: "JosefinSlab";
-  src: url("../fonts/JosefinSlab-Regular.woff2");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "JosefinSlab";
-  src: url("../fonts/JosefinSlab-Bold.woff2");
-  font-style: normal;
-  font-weight: bold;
-}
-@font-face {
-  font-family: "JosefinSlab";
-  src: url("../fonts/JosefinSlab-SemiBold.woff2");
-  font-style: normal;
-  font-weight: 400;
-}
+
 
 /* --------------------------------------------FONTS-------------------------------------------- */
 
@@ -237,7 +202,7 @@ body {
   position: relative;
   width: 1920px;
   margin: 0 auto;
-  font-family: "JosefinSlab";
+  font-family: "Josefin Slab";
   font-weight: 400;
   overflow-x: hidden;
 }
@@ -265,8 +230,8 @@ header {
   color: #fa67ab;
 }
 
-.nav-link,
-.dropdown-item {
+header .nav-link,
+header .dropdown-item {
   color: rgb(228, 228, 228);
   font-family: "Atari";
 }
@@ -402,7 +367,7 @@ footer p {
 
 .information-write > h1,
 .carousel-div h1 {
-  font-family: "JosefinSans";
+  font-family: "Josefin Sans";
   font-weight: bold;
   color: rgb(226, 226, 226);
   font-size: 3.2rem;
@@ -470,4 +435,36 @@ footer p {
 
 .splashArt-div {
   background-color: #19215e;
+}
+
+
+
+
+/*---------------------------------------------ADMINISTRATION---------------------------------------*/
+
+.admin{
+  background-color: rgb(16, 16, 40);
+  color: white;
+  font-family: "Josefin Sans";
+}
+
+.admin main{
+  padding: 15rem 0;
+}
+
+.admin-nav li{
+  margin: 0;
+}
+
+.admin-nav a:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.admin h1, .admin h4{
+  padding: 0.3rem 1.5rem;
+}
+
+.admin p{
+  font-size: 1.5rem;
+  padding: 0.5rem;
 }
