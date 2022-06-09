@@ -7,6 +7,19 @@
 /* --------------------------------------------FONTS-------------------------------------------- */
 
 @font-face {
+  font-family: "Neon";
+  src: url("../fonts/Neon.woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Neon";
+  src: url("../fonts/Neon.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
   font-family: "Atari";
   src: url("../fonts/AtariClassic-Regular.woff");
   font-style: normal;
@@ -30,7 +43,42 @@
   font-style: normal;
   font-weight: normal;
 }
-
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans-Regular.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans-Bold.woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "JosefinSans";
+  src: url("../fonts/JosefinSans-SemiBold.woff2");
+  font-style: normal;
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "JosefinSlab";
+  src: url("../fonts/JosefinSlab-Regular.woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "JosefinSlab";
+  src: url("../fonts/JosefinSlab-Bold.woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "JosefinSlab";
+  src: url("../fonts/JosefinSlab-SemiBold.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
 
 /* --------------------------------------------FONTS-------------------------------------------- */
 
@@ -54,7 +102,7 @@
   text-align: center;
   background-color: white;
   color: #19215e;
-  display: block;
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -64,10 +112,10 @@
   height: 40rem;
   z-index: 1;
   padding: 5rem 2rem;
-  align-content: center;
+  grid-row-gap: 1rem;
   justify-content: center;
   transition: all 0.2s ease-out;
-  border-radius: 2rem;
+  border-radius: 4rem;
 }
 
 .fa-angle-left {
@@ -78,14 +126,10 @@
   padding: 1.5rem;
 }
 
-.login-form, .createAccount-form, .passwordAccount-form{
-  display: grid;
-  grid-gap: 2rem;
-  width: 25rem;
-}
-
 .login-form {
-  margin: 6rem auto 0;
+  display: grid;
+  grid-gap: 2.5rem;
+  margin: 2.5rem 7rem;
   grid-template-areas:
     "email"
     "password"
@@ -93,8 +137,10 @@
 }
 
 .createAccount-form {
+  display: grid;
+  width: 30rem;
+  grid-gap: 1.8rem;
   padding: 1rem 0;
-  margin : 4rem auto 0;
   grid-template-areas:
     "pseudo pseudo"
     "password repassword"
@@ -103,26 +149,35 @@
 }
 
 .passwordAccount-form {
-  margin : 0 auto;
+  display: grid;
+  grid-row-gap: 2rem;
+  width: 25rem;
+  justify-content: center;
+  align-content: center;
   grid-template-areas:
     "title"
     "email"
     "submit";
 }
 
-.input-el, .input-create-el {
+.input-el {
+  padding: 1rem 3rem;
+  border-radius: 0.3rem;
+  border: 2px solid #19215e;
+  text-align: start;
+}
+
+.input-create-el {
   padding: 1rem 1rem;
   border-radius: 0.3rem;
   border: 2px solid #19215e;
-  width: 100%;
   text-align: start;
 }
 
 .message-el {
-  position: absolute;
+  margin: 2rem 0 0 0;
+  padding: 0;
   border: none;
-  top : 10rem;
-  left: 15rem;
 }
 .nickname-el {
   grid-area: pseudo;
@@ -141,7 +196,7 @@
 
 .button-reSubmit-el {
   position: relative;
-  top: 2.2rem;
+  top: 3.5rem;
 }
 
 .passwordAccountContact-el {
@@ -150,15 +205,11 @@
 }
 .passwordAccountTitle-el {
   grid-area: title;
-  margin-bottom: 4.5rem;
-}
-
-.button-submit-el{
-  margin: 1.5rem 0 3.5rem;
+  margin: 1.5rem 0 4.5rem;
 }
 
 .button-passwordSubmit-el {
-  margin: 3rem 0 3.3rem;
+  margin-top: 6rem;
 }
 
 .button-submit-el,
@@ -166,25 +217,35 @@
 .button-passwordSubmit-el {
   grid-area: submit;
   border-color: #19215e;
-  border-radius: 3rem;
-  width: 4.2rem;
+  border-radius: 100rem;
+  width: 4rem;
   height: 4rem;
   cursor: pointer;
   place-self: center;
   transition: 0.2s ease-out 0.1s;
+  margin-bottom: 0rem;
 }
 
 .button-submit-el:hover,
 .button-reSubmit-el:hover,
 .button-passwordSubmit-el:hover {
   color: white;
-  background-color: #3bac29;
-  border: none;
-  border-radius: 10px;
-  width: 10rem;
+  background-color: #19215e;
+  width: 4.2rem;
+  height: 4.2rem;
+  font-size: 120%;
+  margin-bottom: -0.2rem;
 }
 
-.contact-us-el,
+.button-submit-el:active,
+.button-reSubmit-el:active,
+.button-passwordSubmit-el {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 0rem;
+  color: #3bac29;
+}
+
 .forget-password-el,
 .create-account-el {
   display: inline-block;
@@ -197,6 +258,16 @@
 /*---------------------------------------------FORMULAIRES---------------------------------------*/
 
 /*---------------------------------------------HEADER & FOOTER---------------------------------------*/
+
+body {
+  position: relative;
+  width: 1920px;
+  margin: 0 auto;
+  font-family: "JosefinSlab";
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
 .logo {
   width: 5rem;
 }
@@ -369,7 +440,7 @@ footer {
 
 .information-write > h1,
 .carousel-div h1 {
-  font-family: "Josefin Sans";
+  font-family: "JosefinSans";
   font-weight: bold;
   color: rgb(226, 226, 226);
   font-size: 3.2rem;
@@ -440,33 +511,221 @@ footer {
 }
 
 
+/*----------------------------------------------Loung et Profil----------------------------------------------*/
 
 
-/*---------------------------------------------ADMINISTRATION---------------------------------------*/
 
-.admin{
-  background-color: rgb(16, 16, 40);
+.div_centered {
+  max-width: 90%;
+}
+
+.filtre_div {
+  font-family: "Neon" ;
+  font-size: 2rem;
+  height: 200px;
+  margin-top : 80px;
+  margin-bottom : 80px;
+  background-color: rgba(6, 6, 6, 0.1);
+  border-radius: 2rem;
+}
+
+.filtre_div .row {
+  flex : 1;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.en_tete{
+  height: 52px;
+  background-color: rgba(6, 6, 6, 0.1);
+  border-radius: 1rem;
+  font-size: 2rem;
+  padding : 0 1rem;
+  padding-top: 3px;
+}
+
+.en_tete  p {
+  margin:0;
+}
+
+.img_txt_post{
+  font-family: "Neon";
+  font-size: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+ img.img_txt_post {
+  max-width: 450px;
+  max-height: 335px;
+  border-radius: 20px;
+}
+
+div.img_txt_post {
+margin-top: 50px;
+margin-bottom: 100px;
+}
+
+.img_txt_post .col > p{
+font-size: 52px;
+font-weight: bold;
+text-align: center;
+}
+
+#neon_font {
+font-family: "Neon";
+}
+
+div.posts:hover {
+  background-color: #dae5ff;
+  transition: 0.5s;
+}
+
+div.posts {
+  transition: 0.5s;
+  border-radius: 1rem;
+}
+
+.div_centered a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+
+
+/* ----------------------------------------------Lounge---------------------------------------------*/
+
+.banner{
+  height: 1000px;
+  background-image:url("../img/lounge.png");
+  background-size: cover;
+}
+
+.filtre {
+  background-color: white;
+  width: 250px;
+  height: 45px;
+  border-radius: 30px;
+  padding-left:30px;
+  border: none;
+}
+
+/*------------------------------------------------------Profil----------------------------------------------*/
+
+.banner_profil {
+  position: relative;
+  height: 1000px;
+  background-image:url("../img/Fond_profil.png");
+  background-size: cover;
+  padding-top: 850px;
+}
+
+.barre_profil {
+  position: static;
+  background-color: rgba(22, 22, 22, 0.5);
+  height: 107px;
+  width: 100%;
+  font-size: 36px;
   color: white;
-  font-family: "Josefin Sans";
+  text-shadow: 0 0 7px #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.admin main{
-  padding: 15rem 0;
+.barre_profil .col-2{
+  margin-right: 20px;
 }
 
-.admin-nav li{
-  margin: 0;
+.barre_profil p{
+  margin-bottom: 0;
 }
 
-.admin-nav a:hover{
-  background-color: rgba(255, 255, 255, 0.5);
+.banner_profil img{
+  position: absolute;
+  bottom: 0;
+  margin-left: 120px;
 }
 
-.admin h1, .admin h4{
-  padding: 0.3rem 1.5rem;
+.filtre_div button {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 150px;
+  color: black;
 }
 
-.admin p{
+.filtre_div div.col-6 p {
+  margin-left: 50px;
+}
+
+.filtre_div button {
+    background-color: rgba(35,35,35,0.15);
+    border: none;
+    width: 350px;
+    height: 60px;
+    font-size: 30px;
+}
+
+.barre_fine {
+  background-color: rgba(6, 6, 6, 0.1);
+  border-radius: 30px;
+  height: 16px;
+  margin-bottom : 80px;
+}
+
+/*------------------------------------------------------Event----------------------------------------------*/
+
+.banner_event {
+  position: relative;
+  height: 1000px;
+  background-image:url("../img/fond_event.png");
+  background-size: cover;
+}
+
+.currently {
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.36);
+}
+
+/*------------------------------------------------------Post----------------------------------------------*/
+
+.commenter input, .commenter button {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 16px;
+
+}
+
+.commenter input{
+    height:59px;
+    border: 3px solid black;
+}
+
+.commenter button{
+  margin-bottom: 12px;
+}
+
+.comments {
+  border: 3px solid black;
+  border-radius: 16px;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.comments h1 {
   font-size: 1.5rem;
-  padding: 0.5rem;
+}
+
+.comments img {
+  max-height: 140px;
+}
+
+div.post {
+  position: relative;
+  top : 203.59px;
+  margin-bottom: 283.59px;
 }
