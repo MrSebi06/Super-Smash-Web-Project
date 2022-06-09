@@ -201,49 +201,11 @@
   width: 5rem;
 }
 
-<<<<<<< HEAD
 .user-link {
   font-size: 2.6rem;
 }
 
 header {
-=======
-body {
-  position: relative;
-  width: 1920px;
-  margin: 0 auto;
-  font-family: "Josefin Slab";
-  font-weight: 400;
-  overflow-x: hidden;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(25, 33, 94, 0.25);
-  padding: 1.3rem 3rem;
-  z-index: 100000;
-}
-
-.logo {
-  width: 4.5rem;
-}
-
-.navbar {
-  padding: 0;
-  font-size: 1.1rem;
-}
-
-.nav-link:hover {
-  color: #fa67ab;
-}
-
-header .nav-link,
-header .dropdown-item {
-  color: rgb(228, 228, 228);
->>>>>>> 87650b6c87735ea454efd9b6cd6ddb3662cfab48
   font-family: "Atari";
   font-size: 1.3rem;
   padding: 0.5rem 2rem;
@@ -259,7 +221,7 @@ footer {
   position: relative;
   font-weight: normal;
   bottom: 0;
-  width: 100;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
