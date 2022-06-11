@@ -111,7 +111,7 @@ include("includes/head.php") ?>
                         de fonctionnalités afin d’y incorporer +++ de fun. Voilà pourquoi
                         nous voulons recruter les plus créatifs d’entre vous.<br />
                         <br />
-                        Hâte de vous voir parmi nous -> <a href="#">ici</a>
+                        Hâte de vous voir parmi nous -> <a href="apply.php">ici</a>
                     </p>
                 </div>
                 <img class="col-md-4 sonic" src="img/mario_charac.png" />

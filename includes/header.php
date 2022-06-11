@@ -9,7 +9,7 @@
                     <ul class="navbar-nav">
                         <div class="pages-link">
                             <li class="nav-item">
-                                <a class="nav-link <?php echo ($title == 'Accueil') ? 'active' : ''; ?>" aria-current="page" href="#">HOME</a>
+                                <a class="nav-link <?php echo ($title == 'Accueil') ? 'active' : ''; ?>" aria-current="page" href="index.php">HOME</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="#" id="arcadeDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
