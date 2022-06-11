@@ -38,17 +38,28 @@
                                 <li><a class="dropdown-item" href="#">English</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="userDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="user-link fa-solid fa-user-astronaut"></i>
-                            </a>
-                            <ul class="userDropdownList dropdown-menu" aria-labelledby="userDropdownMenu">
-                                <li><a class="dropdown-item" href="#">Avatar</a></li>
-                                <li><a class="dropdown-item" href="#">Profil</a></li>
-                                <li><a class="dropdown-item" href="#">Stats</a></li>
-                                <li><a class="dropdown-item" href="#">Déconnexion</a></li>
-                            </ul>
-                        </li>
+                        <?php 
+                            if(!isset($_SESSION['email'])){
+                                echo '<li class="nav-item">
+                                        <a onclick="login()"class="nav-link">
+                                            <i class="user-link fa-solid fa-user-astronaut"></i>
+                                        </a>
+                                        </li>'; 
+                            }
+                            else{
+                                echo '<li class="nav-item dropdown">
+                                        <a class="nav-link" id="userDropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="user-link fa-solid fa-user-astronaut"></i>
+                                        </a>
+                                        <ul class="userDropdownList dropdown-menu" aria-labelledby="userDropdownMenu">
+                                            <li><a class="dropdown-item" href="#">Avatar</a></li>
+                                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                                            <li><a class="dropdown-item" href="#">Stats</a></li>
+                                            <li><a class="dropdown-item" href="verifications/logout.php">Déconnexion</a></li>
+                                        </ul>
+                                    </li>';
+                            }
+                        ?>
                     </ul>
                 </div>
             </div>
