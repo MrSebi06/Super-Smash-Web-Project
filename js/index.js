@@ -130,9 +130,10 @@ function shuffleArray(arr) {
   arr.sort(() => Math.random() - 0.5);
 }
 
-let arrayPuzzle = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 function generatePuzzle() {
+
+  let arrayPuzzle = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
   shuffleArray(arrayPuzzle);
 
   for (let i = 0; i < rows; i++) {
@@ -202,6 +203,7 @@ function verificationAll() {
       document.getElementById("2-2").src ==
         "http://localhost:81/Projet%20annuel%20RETROSPECTIVE/puzzle/9.png"
     ) {
+      
       has_right = true;
 
       document.getElementById("submit-button").setAttribute("type", "submit");
