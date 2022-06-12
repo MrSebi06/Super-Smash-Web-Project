@@ -15,6 +15,10 @@
                 $_GET['page'] = 'resume';
             }
 
+            if(isset($_GET['msg']) && !empty($_GET['msg'])){
+                echo '<h2 class="alerte text-' . $_GET['type'] . '">' . $_GET['msg'] . '</h2>';
+            }
+
             $resume = ($_GET['page'] == 'resume') ? 'active' : '';
             $users = ($_GET['page'] == 'users') ? 'active' : '';
             $posts = ($_GET['page'] == 'posts') ? 'active' : '';
@@ -50,8 +54,8 @@
                         </nav>
                     </div>
 
-                    <div class="col-lg">
-                        <h1 class="bg-primary row rounded no-gutters"><?= ucfirst($_GET['page'])?></h1>
+                    <div class="col-lg-10">
+                        <h1 class="bg-primary row rounded no-gutters "><?= ucfirst($_GET['page'])?></h1>
                         <?php 
                         include('includes/db.php');
                         include('includes/admin/admin_' . $_GET['page'] . '.php');

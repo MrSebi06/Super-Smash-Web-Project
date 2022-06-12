@@ -520,7 +520,6 @@ footer p {
   background-color: rgb(16, 16, 40);
   color: white;
   font-family: "Josefin Sans";
-  overflow-x: auto;
 }
 
 .admin main{
@@ -545,5 +544,45 @@ footer p {
 }
 
 .admin .form-control-lg{
+  padding: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.admin td{
+  padding: 0.1rem;
+  font-size: 1rem;
+}
+
+.admin tr td:last-child button{
+  width: 48%;
+  height: 1.5rem;
+  text-align: center;
   padding: 0;
+}
+
+.admin tr td:last-child button:last-child{
+  width: 100%;
+}
+
+.admin td img{
+  height: 4rem;
+  width: 4rem;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  border: 1px solid white;
+  margin: 0.4rem 0;
+}
+
+.admin .emailtd{
+  max-width: 15rem;
+}
+
+.admin .alerte{
+  margin: 0 10rem;
+}
+
+.admin .disabled{
+  width: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
