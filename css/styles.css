@@ -31,7 +31,6 @@
   font-weight: normal;
 }
 
-
 /* --------------------------------------------FONTS-------------------------------------------- */
 
 /* --------------------------------------------ALERTS-------------------------------------------- */
@@ -53,7 +52,7 @@
   text-align: center;
   background-color: white;
   color: #19215e;
-  display: block;
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -75,7 +74,7 @@
   text-align: center;
   background-color: white;
   color: #19215e;
-  display: block;
+  display: none;
   position: fixed;
   left: 50%;
   top: 55%;
@@ -235,7 +234,7 @@
   margin: 3px 0 2px 0;
 }
 
-#submit-button {
+#submit-button-login, #submit-button-create, #submit-button-password {
   grid-area: submit;
   border: 2px solid #19215e;
   border-radius: 100rem;
@@ -271,118 +270,119 @@
 /*---------------------------------------------FORMULAIRES---------------------------------------*/
 
 /*---------------------------------------------HEADER & FOOTER---------------------------------------*/
+.logo {
+  width: 5rem;
+}
 
-body {
-  position: relative;
-  width: 1920px;
-  margin: 0 auto;
-  font-family: "Josefin Slab";
-  font-weight: 400;
-  overflow-x: hidden;
+.user-link {
+  font-size: 2.6rem;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(25, 33, 94, 0.25);
-  padding: 1.3rem 3rem;
-  z-index: 100000;
-}
-
-.logo {
-  width: 4.5rem;
-}
-
-.navbar {
-  padding: 0;
-  font-size: 1.1rem;
-}
-
-.nav-link:hover {
-  color: #fa67ab;
-}
-
-header .nav-link,
-header .dropdown-item {
-  color: rgb(228, 228, 228);
   font-family: "Atari";
-}
-
-.dropdown-item {
-  color: #080f46;
-}
-
-.fa-user-astronaut {
-  font-size: 3rem;
-}
-
-.fa-language {
-  font-size: 1.7rem;
-}
-
-@media screen and (max-width: 992px) {
-  .navbar-nav {
-    width: 30%;
-    margin-top: 3rem;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .navigation {
-    justify-content: flex-end;
-  }
-  .navbar-nav {
-    align-items: center;
-  }
-  .connexion-nav-item {
-    margin-left: 5rem !important;
-  }
-
-  .language-nav-item {
-    margin-left: 17rem !important;
-  }
-
-  .nav-item {
-    margin-left: 8.5rem;
-  }
-
-  .dropdown-menu {
-    top: 4rem !important;
-  }
-
-  .dropdown-menu-profile {
-    top: 5rem !important;
-    text-align: end;
-    right: 0;
-  }
+  font-size: 1.3rem;
+  padding: 0.5rem 2rem;
+  background-color: rgba(25, 33, 94, 0.25);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 9999999;
+  color: rgb(235, 235, 235);
 }
 
 footer {
   position: relative;
   font-weight: normal;
   bottom: 0;
-  width: 100;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem 5rem;
+  color: rgb(255, 255, 255) !important;
   background-color: #080f46;
-  color: rgb(235, 235, 235);
   font-size: 1.3rem;
 }
 
-footer p {
-  margin: 0;
-}
-.footer-icon a {
-  padding: 0.5rem;
-  margin: 0 1.6rem;
+.nav-link {
+  color: rgb(163, 163, 163);
 }
 
-.footer-icon a i {
-  font-size: 2rem;
+.nav-link.active {
+  color: rgb(255, 255, 255) !important;
+}
+.nav-link:hover {
+  color: #fa67ab !important;
+}
+
+.dropdown-item {
+  color: #080f46;
+}
+
+@media screen and (min-width: 992px) {
+  @media screen and (max-width: 1600px) {
+    .pages-link {
+      margin-right: 10rem !important;
+    }
+  }
+  @media screen and (max-width: 1454px) {
+    header {
+      font-size: 1rem !important;
+    }
+    .pages-link .nav-item {
+      margin: 0 2rem !important;
+    }
+    .pages-link {
+      margin-right: 5rem !important;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .pages-link .nav-item {
+      margin: 0 1rem !important;
+    }
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  .pages-link {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20rem;
+  }
+
+  .pages-link .nav-item {
+    margin: 0 3rem;
+  }
+
+  .userDropdownList {
+    left: -7rem !important;
+  }
+
+  .gamesDropdownList {
+    transform: translateX(-5%);
+  }
+
+  .languagesDropdownList {
+    left: -3.5rem !important;
+  }
+  .dropdown-menu {
+    top: 5.7rem !important;
+  }
+
+  .language-link {
+    font-size: 1.3rem;
+    margin-right: 5rem;
+  }
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.links-container {
+  justify-content: flex-end;
 }
 
 /*---------------------------------------------HEADER & FOOTER---------------------------------------*/
@@ -441,7 +441,7 @@ footer p {
 
 .information-write > h1,
 .carousel-div h1 {
-  font-family: "Josefin Sans";
+  font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   color: rgb(226, 226, 226);
   font-size: 3.2rem;
@@ -511,8 +511,68 @@ footer p {
   background-color: #19215e;
 }
 
+/*----------------------APPLY SECTION---------------------*/
 
+.apply-div-el {
+  background-color: #101d80;
+  padding: 13rem 30rem 10rem;
+  text-align: center;
+  color: white;
+}
 
+.apply-div-el h1 {
+  font-size: 3rem;
+  font-family: "Atari";
+}
+
+.apply-form-el {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 5rem;
+  padding-top: 5rem;
+  background-color: white;
+  color: rgb(49, 49, 49);
+  border-radius: 2rem;
+}
+
+.apply-form-el h2 {
+  margin-bottom: 4.5rem;
+  font-size: 3rem;
+  font-family: "Josefin Slab", serif;
+  font-weight: 600 !important;
+}
+
+.apply-form-el form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30rem;
+  border-radius: 10px;
+  text-align: start;
+  font-size: 1.3rem;
+  font-family: "Josefin Slab", serif;
+  font-weight: 800 !important;
+}
+
+.apply-form-el form input:not(.file_apply),
+.apply-form-el form textarea {
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+
+.apply-form-el form label {
+  margin-bottom: 0.5rem;
+}
+
+.files_apply {
+  padding: 0 !important;
+}
+
+.champ_obligatoire {
+  color: rgb(255, 30, 30);
+}
 
 /*---------------------------------------------ADMINISTRATION---------------------------------------*/
 
@@ -520,6 +580,7 @@ footer p {
   background-color: rgb(16, 16, 40);
   color: white;
   font-family: "Josefin Sans";
+  overflow-x: auto;
 }
 
 .admin main{
@@ -544,45 +605,7 @@ footer p {
 }
 
 .admin .form-control-lg{
-  padding: 0.2rem;
-  font-size: 0.9rem;
-}
-
-.admin td{
-  padding: 0.1rem;
-  font-size: 1rem;
-}
-
-.admin tr td:last-child button{
-  width: 48%;
-  height: 1.5rem;
-  text-align: center;
   padding: 0;
 }
 
-.admin tr td:last-child button:last-child{
-  width: 100%;
-}
-
-.admin td img{
-  height: 4rem;
-  width: 4rem;
-  object-fit: cover;
-  border-radius: 0.7rem;
-  border: 1px solid white;
-  margin: 0.4rem 0;
-}
-
-.admin .emailtd{
-  max-width: 15rem;
-}
-
-.admin .alerte{
-  margin: 0 10rem;
-}
-
-.admin .disabled{
-  width: 1rem;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-}
+/*---------------------------------------------ADMINISTRATION---------------------------------------*/

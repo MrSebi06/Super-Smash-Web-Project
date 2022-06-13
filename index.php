@@ -10,6 +10,41 @@ include("includes/head.php") ?>
     <?php
     include("includes/header.php");
     ?>
+    <div class="login-el">
+        <h1>Connexion</h1>
+        <form class="login-form" action="verifications/connection_verification.php" method="post">
+            <input class="input-el email-el" name="email" type="email" placeholder="Identifiant" />
+            <input class="input-el password-el" name="password" type="password" placeholder="Mot de passe" />
+            <button class="form-submit-yes" id="submit-button-login">
+                <i id="submit-icon-login" class="fa-solid fa-check"></i>
+            </button>
+        </form>
+        <p onclick="passwordAccount()" class="forget-password-el">mot de passe oublié</p>
+        <br />
+        <p onclick="createAccount()" class="create-account-el">créer un compte</p>
+    </div>
+    <div class="createAccount-el">
+        <i onclick="login()" class="fa-2xl fa-solid fa-angle-left"></i>
+        <h1>Inscription</h1>
+        <form class="createAccount-form" action="verifications/create_account_verification.php" method="post">
+            <input class="input-create-el nickname-el" name="nickname" type="text" placeholder="Pseudo" />
+            <input class="input-create-el password-el" name="password" type="password" placeholder="Mot de passe" />
+            <input class="input-create-el rePassword-el" name="repassword" type="password" placeholder="Encore une fois !" />
+            <input class="input-create-el email-el" name="email" type="email" placeholder="Email" />
+            <div id="board"></div>
+            <button class="form-submit-no" id="submit-button-create"><i id="submit-icon-create" class="fa-solid fa-xmark"></i></button>
+        </form>
+    </div>
+    <div class="passwordAccount-el">
+        <i onclick="login()" class="fa-2xl fa-solid fa-angle-left"></i>
+        <form class="passwordAccount-form">
+            <h1 class="passwordAccountTitle-el">Récupération de mot de passe</h1>
+            <input class="input-el email-el" name="email" type="email" placeholder="Saisissez votre email de récupération" />
+            <button class="form-submit-yes" id="submit-button-password"><i id="submit-icon-password" class="fa-solid fa-check"></i></button>
+            <p class="contact-us-el">Contacter le support</p>
+        </form>
+    </div>
+
     <main onclick="fermer()" class="blur-el">
         <div class="background-index container-fluid">
             <img class="image1" src="img/retrospective-text.png" />
